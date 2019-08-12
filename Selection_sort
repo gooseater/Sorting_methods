@@ -5,6 +5,8 @@ void swap(int *a, int *b) {
 }
 
 void selection_sort(int *arr, int len) {
+  assert(arr);
+  assert(len > 0);
   for (int i = 0; i < len - 1; ++i) {
     int pos = i;
     for (int j = i + 1; j < len; ++j) {
