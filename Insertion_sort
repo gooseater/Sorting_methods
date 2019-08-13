@@ -1,0 +1,29 @@
+void swap(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+void insertion_sort(int arr[], int len) {
+  assert(arr);
+  assert(len > 0);
+  for (int i = 1; i < len; ++i) {
+    int pos = i - 1;
+    while (pos >= 0) {
+      if (arr[pos] > arr[pos + 1]) {
+        swap(&arr[pos], &arr[pos + 1]);
+      } else {
+        break;
+      }
+      pos--;
+    }
+  }
+}
+
+
+
+
+
+
+
+
